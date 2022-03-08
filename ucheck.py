@@ -3,11 +3,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
-USERNAME = 'tomsnoel'
-PASSWORD = 'Krystal@12'
+USERNAME = ''
+PASSWORD = ''
 PATH = 'C:\Program Files (x86)\chromedriver.exe'
 
-driver = webdriver.Chrome(PATH)
+options = webdriver.ChromeOptions('headless')
+
+driver = webdriver.Chrome(PATH, options=options)
 driver.get('https://ucheck.utoronto.ca/')
 driver.implicitly_wait(5)
 
